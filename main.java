@@ -1,12 +1,23 @@
+import java.util.Scanner;
+
 class HelloWorld {
     public static void main(String[] args) {
 
-        String exemple = "bonjour";
-        System.out.println(exemple);
+        Scanner saisieUtilisateur = new Scanner(System.in);
 
-        StringBuilder Reverse = new StringBuilder(exemple);
-        exemple = Reverse.reverse().toString();
-        System.out.println(exemple);
+        System.out.print("Veuillez saisir la taille de la base de la pyramide : ");
+        int base = saisieUtilisateur.nextInt();
+        System.out.println(" ");
+
+        int taille = 1;
+        while(base != 0){
+            for(int i = 0; i < taille; i++){
+                System.out.print("*");
+            }
+            System.out.println(" ");
+            taille++;
+            base--;
+        }
 
     }
 }
