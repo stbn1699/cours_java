@@ -2,15 +2,11 @@ class HelloWorld {
     public static void main(String[] args) {
 
         String exemple = "bonjour";
-        int taille = exemple.length();
+        System.out.println(exemple);
 
-        for(int i = 0; i < taille; i++){
-
-            int numero = i + 1;
-
-            System.out.println(exemple + numero);
-
-        }
+        StringBuilder Reverse = new StringBuilder(exemple);
+        exemple = Reverse.reverse().toString();
+        System.out.println(exemple);
 
     }
 }
